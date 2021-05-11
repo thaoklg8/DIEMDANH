@@ -29,6 +29,7 @@ namespace WF_DiemDanh
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.dtgHienThi = new System.Windows.Forms.DataGridView();
             this.btnExcel = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
@@ -42,13 +43,14 @@ namespace WF_DiemDanh
             this.dtgHienThi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgHienThi.BackgroundColor = System.Drawing.Color.White;
             this.dtgHienThi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgHienThi.Location = new System.Drawing.Point(1, 98);
+            this.dtgHienThi.Location = new System.Drawing.Point(1, 78);
+            this.dtgHienThi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtgHienThi.Name = "dtgHienThi";
             this.dtgHienThi.ReadOnly = true;
             this.dtgHienThi.RowHeadersWidth = 62;
             this.dtgHienThi.RowTemplate.Height = 28;
             this.dtgHienThi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgHienThi.Size = new System.Drawing.Size(798, 351);
+            this.dtgHienThi.Size = new System.Drawing.Size(709, 281);
             this.dtgHienThi.TabIndex = 0;
             // 
             // btnExcel
@@ -57,9 +59,10 @@ namespace WF_DiemDanh
             this.btnExcel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnExcel.Location = new System.Drawing.Point(487, 30);
+            this.btnExcel.Location = new System.Drawing.Point(433, 24);
+            this.btnExcel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExcel.Name = "btnExcel";
-            this.btnExcel.Size = new System.Drawing.Size(188, 40);
+            this.btnExcel.Size = new System.Drawing.Size(167, 32);
             this.btnExcel.TabIndex = 1;
             this.btnExcel.Text = "XUẤT EXCEL";
             this.btnExcel.UseVisualStyleBackColor = false;
@@ -71,11 +74,13 @@ namespace WF_DiemDanh
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(711, 360);
             this.Controls.Add(this.btnExcel);
             this.Controls.Add(this.dtgHienThi);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "XUẤT DỮ LIỆU";

@@ -36,7 +36,6 @@ D:\CODE\DIEMDANH\WF_DiemDanh\bin\Release\System.Data.OleDb.xml
 D:\CODE\DIEMDANH\WF_DiemDanh\bin\Release\System.Net.Http.Extensions.xml
 D:\CODE\DIEMDANH\WF_DiemDanh\bin\Release\System.Net.Http.Primitives.xml
 D:\CODE\DIEMDANH\WF_DiemDanh\obj\Release\WF_DiemDanh.csproj.App.config
-D:\CODE\DIEMDANH\WF_DiemDanh\obj\Release\WF_DiemDanh.csprojAssemblyReference.cache
 D:\CODE\DIEMDANH\WF_DiemDanh\obj\Release\WF_DiemDanh.csproj.ResolveComReference.cache
 D:\CODE\DIEMDANH\WF_DiemDanh\obj\Release\WF_DiemDanh.Form1.resources
 D:\CODE\DIEMDANH\WF_DiemDanh\obj\Release\WF_DiemDanh.Form2.resources
