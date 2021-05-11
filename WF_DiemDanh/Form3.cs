@@ -88,5 +88,48 @@ namespace WF_DiemDanh
             fr.ShowDialog();
             this.Close();
         }
+
+        private void btnNhap_Click(object sender, EventArgs e)
+        {
+            DocGhiFile.GhiFile("DuongDanAccess.txt", txtAccess.Text);
+            try
+            {
+                OleDbConnection strcon = new OleDbConnection();
+                string a = DocGhiFile.DocFile("DuongDanAccess.txt");
+                string s = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = " + a + "; Persist Security Info = False;";
+                strcon.ConnectionString = s;
+                strcon.Open();
+                MessageBox.Show("Kết nối Access thành công");
+                btnMayB.Visible = true;
+                btnA.Visible = true;
+            }
+            catch
+            {
+                MessageBox.Show("Đường dẫn chưa đúng! ");
+                btnMayB.Visible = false;
+                btnA.Visible = false;
+            }
+        }
+
+        private void FormAccess_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                OleDbConnection strcon = new OleDbConnection();
+                string a = DocGhiFile.DocFile("DuongDanAccess.txt");
+                string s = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = " + a + "; Persist Security Info = False;";
+                strcon.ConnectionString = s;
+                strcon.Open();
+            }
+            catch
+            {
+                btnNhap.Visible = true;
+                label1.Visible = true;
+                txtAccess.Visible = true;
+                txtAccess.Focus();
+                btnMayB.Visible = false;
+                btnA.Visible = false;
+            } 
+        }
     }
 }

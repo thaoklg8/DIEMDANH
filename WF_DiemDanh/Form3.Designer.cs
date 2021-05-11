@@ -32,6 +32,9 @@ namespace WF_DiemDanh
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAccess));
             this.btnA = new System.Windows.Forms.Button();
             this.btnMayB = new System.Windows.Forms.Button();
+            this.txtAccess = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnNhap = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnA
@@ -62,6 +65,39 @@ namespace WF_DiemDanh
             this.btnMayB.UseVisualStyleBackColor = false;
             this.btnMayB.Click += new System.EventHandler(this.btnMayB_Click);
             // 
+            // txtAccess
+            // 
+            this.txtAccess.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.txtAccess.Location = new System.Drawing.Point(91, 126);
+            this.txtAccess.Name = "txtAccess";
+            this.txtAccess.Size = new System.Drawing.Size(320, 35);
+            this.txtAccess.TabIndex = 4;
+            this.txtAccess.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(86, 73);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(256, 25);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Nhập đường dẫn file Access";
+            this.label1.Visible = false;
+            // 
+            // btnNhap
+            // 
+            this.btnNhap.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnNhap.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnNhap.Location = new System.Drawing.Point(445, 126);
+            this.btnNhap.Name = "btnNhap";
+            this.btnNhap.Size = new System.Drawing.Size(138, 35);
+            this.btnNhap.TabIndex = 6;
+            this.btnNhap.Text = "Enter";
+            this.btnNhap.UseVisualStyleBackColor = false;
+            this.btnNhap.Visible = false;
+            this.btnNhap.Click += new System.EventHandler(this.btnNhap_Click);
+            // 
             // FormAccess
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -69,6 +105,9 @@ namespace WF_DiemDanh
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(772, 386);
+            this.Controls.Add(this.btnNhap);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtAccess);
             this.Controls.Add(this.btnMayB);
             this.Controls.Add(this.btnA);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
@@ -77,7 +116,9 @@ namespace WF_DiemDanh
             this.Name = "FormAccess";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CHỌN MÁY";
+            this.Load += new System.EventHandler(this.FormAccess_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -85,5 +126,8 @@ namespace WF_DiemDanh
 
         private System.Windows.Forms.Button btnA;
         private System.Windows.Forms.Button btnMayB;
+        private System.Windows.Forms.TextBox txtAccess;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnNhap;
     }
 }
