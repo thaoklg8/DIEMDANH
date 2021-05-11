@@ -70,7 +70,7 @@ namespace WF_DiemDanh
             this.txtAccess.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.txtAccess.Location = new System.Drawing.Point(91, 126);
             this.txtAccess.Name = "txtAccess";
-            this.txtAccess.Size = new System.Drawing.Size(320, 35);
+            this.txtAccess.Size = new System.Drawing.Size(320, 30);
             this.txtAccess.TabIndex = 4;
             this.txtAccess.Visible = false;
             // 
@@ -80,7 +80,7 @@ namespace WF_DiemDanh
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(86, 73);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(256, 25);
+            this.label1.Size = new System.Drawing.Size(218, 20);
             this.label1.TabIndex = 5;
             this.label1.Text = "Nhập đường dẫn file Access";
             this.label1.Visible = false;
@@ -100,7 +100,7 @@ namespace WF_DiemDanh
             // 
             // FormAccess
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -111,6 +111,7 @@ namespace WF_DiemDanh
             this.Controls.Add(this.btnMayB);
             this.Controls.Add(this.btnA);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "FormAccess";
