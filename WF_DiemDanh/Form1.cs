@@ -35,6 +35,7 @@ namespace WF_DiemDanh
         public void Open_DataAccess()
         {
             string a = DocGhiFile.DocFile("DuongDanAccess.txt");
+            //string a = ("D:/CODE/DIEMDANH/WF_DiemDanh/bin/Debug/DuongDanAccess.acc");
             string s = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = " + a + "; Persist Security Info = False;";
             strcon.ConnectionString = s;
             strcon.Open();
@@ -61,7 +62,7 @@ namespace WF_DiemDanh
 
         private void txtNhap_TextChanged(object sender, EventArgs e)
         {
-            if (txtNhap.Text.Length == 10)
+            /*if (txtNhap.Text.Length == 10)
             {
                 if (KiemTraXuatHien())
                 {
@@ -72,7 +73,7 @@ namespace WF_DiemDanh
                 }
                 txtNhap.Clear();
                 txtNhap.Focus();
-            }
+            }*/
         }
         ////////////////////////////HÀM/////
         public bool KiemTraXuatHien() /// kiểm tra đã có trong datagirdview chưa?
@@ -112,6 +113,24 @@ namespace WF_DiemDanh
         {
             Form2 fr = new Form2();
             fr.Show();
+        }
+
+        private void txtNhap_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string data = txtNhap.Text;
+            if (e.KeyChar == (char)13)
+            {
+                if (KiemTraXuatHien())
+                {
+                    DataSet ds = new DataSet();
+                    ds = Load_Data();
+                    dtgHienThi.DataSource = ds.Tables[0];
+                    GuiLenFirebase();
+                }
+                txtNhap.Clear();
+                txtNhap.Focus();
+                //MessageBox.Show(data);
+            }
         }
     }
 }

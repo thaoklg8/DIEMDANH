@@ -40,9 +40,10 @@ namespace WF_DiemDanh
             this.txtNhap.Location = new System.Drawing.Point(151, 95);
             this.txtNhap.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtNhap.Name = "txtNhap";
-            this.txtNhap.Size = new System.Drawing.Size(279, 35);
+            this.txtNhap.Size = new System.Drawing.Size(279, 30);
             this.txtNhap.TabIndex = 0;
             this.txtNhap.TextChanged += new System.EventHandler(this.txtNhap_TextChanged);
+            this.txtNhap.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNhap_KeyPress);
             // 
             // dtgHienThi
             // 
@@ -77,7 +78,7 @@ namespace WF_DiemDanh
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1244, 652);
             this.Controls.Add(this.btnCapNhat);
