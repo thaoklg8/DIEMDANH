@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WF_DiemDanh", "WF_DiemDanh\WF_DiemDanh.csproj", "{1C1CF70E-8ED0-477A-BBE4-5F6AA4142547}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "DIEMDANH.exe", "..\setup\DIEMDANH.exe\DIEMDANH.exe.vdproj", "{3781BD6F-6B50-4230-84FC-26F24BD51312}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C1CF70E-8ED0-477A-BBE4-5F6AA4142547}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C1CF70E-8ED0-477A-BBE4-5F6AA4142547}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C1CF70E-8ED0-477A-BBE4-5F6AA4142547}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C1CF70E-8ED0-477A-BBE4-5F6AA4142547}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3781BD6F-6B50-4230-84FC-26F24BD51312}.Debug|Any CPU.ActiveCfg = Debug
+		{3781BD6F-6B50-4230-84FC-26F24BD51312}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FC7EA25D-CB48-4028-B350-0280BB417B72}
+	EndGlobalSection
+EndGlobal
