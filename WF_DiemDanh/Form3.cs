@@ -129,7 +129,7 @@ namespace WF_DiemDanh
                 txtAccess.Focus();
                 btnMayB.Visible = false;
                 btnA.Visible = false;
-            } 
+            }
         }
     }
 }
