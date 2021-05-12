@@ -46,3 +46,4 @@ D:\CODE\DIEMDANH\WF_DiemDanh\obj\Release\WF_DiemDanh.csproj.CoreCompileInputs.ca
 D:\CODE\DIEMDANH\WF_DiemDanh\obj\Release\WF_DiemDanh.csproj.CopyComplete
 D:\CODE\DIEMDANH\WF_DiemDanh\obj\Release\WF_DiemDanh.exe
 D:\CODE\DIEMDANH\WF_DiemDanh\obj\Release\WF_DiemDanh.pdb
+D:\CODE\DIEMDANH\WF_DiemDanh\obj\Release\WF_DiemDanh.csprojAssemblyReference.cache
