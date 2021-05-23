@@ -50,7 +50,7 @@ namespace WF_DiemDanh
             table.Columns.Add("Họ và tên");
             table.Columns.Add("Phòng");
             table.Columns.Add("Thời gian");
-            table.Columns.Add("Ghi chú");
+            table.Columns.Add("CMND");
 
             for (int i = 1; i < 500; i++)
             {

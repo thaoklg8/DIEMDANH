@@ -54,6 +54,20 @@ namespace WF_DiemDanh
             daShowData.Fill(dsHienThi, "THONGTIN_SINHVIEN");
             return dsHienThi;
         }
+        public DataSet Load_Data_CMND()
+        {
+            DateTime da = DateTime.Now;
+            string ti = da.ToString();
+            string s = "UPDATE THONGTIN_SINHVIEN set time_ ='" + ti + "'where CMND='" + txtCMND.Text + "';";
+            string st = "select * from THONGTIN_SINHVIEN where CMND='" + txtCMND.Text + "'";
+
+
+            OleDbDataAdapter tr = new OleDbDataAdapter(s, strcon);
+            tr.Fill(dsHienThi, "THONGTIN_SINHVIEN");
+            OleDbDataAdapter daShowData = new OleDbDataAdapter(st, strcon);
+            daShowData.Fill(dsHienThi, "THONGTIN_SINHVIEN");
+            return dsHienThi;
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             txtNhap.Focus();
@@ -85,7 +99,13 @@ namespace WF_DiemDanh
                     string a = dtgHienThi.Rows[i].Cells[0].Value.ToString();
                     if (a == txtNhap.Text)
                     {
-                        MessageBox.Show("Đã điểm danh", "THÔNG BÁO");
+                        MessageBox.Show("Đã điểm danh!", "THÔNG BÁO");
+                        return false;
+                    }
+                    string b = dtgHienThi.Rows[i].Cells[4].Value.ToString();
+                    if (b == txtCMND.Text)
+                    {
+                        MessageBox.Show("Đã điểm danh!", "THÔNG BÁO");
                         return false;
                     }
                 }
@@ -129,8 +149,20 @@ namespace WF_DiemDanh
                 }
                 txtNhap.Clear();
                 txtNhap.Focus();
-                //MessageBox.Show(data);
             }
+        }
+
+        private void btnEnter_Click(object sender, EventArgs e)
+        {
+            if (KiemTraXuatHien())
+            {
+                DataSet ds = new DataSet();
+                ds = Load_Data_CMND();
+                dtgHienThi.DataSource = ds.Tables[0];
+                GuiLenFirebase();
+            }
+            txtCMND.Clear();
+            txtNhap.Focus();
         }
     }
 }
