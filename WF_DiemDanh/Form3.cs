@@ -95,7 +95,7 @@ namespace WF_DiemDanh
             try
             {
                 OleDbConnection strcon = new OleDbConnection();
-                string a = DocGhiFile.DocFile("DuongDanAccess.txt");
+                string a = txtAccess.Text;
                 string s = @"Provider = Microsoft.ACE.OLEDB.12.0; Data Source = " + a + "; Persist Security Info = False;";
                 strcon.ConnectionString = s;
                 strcon.Open();

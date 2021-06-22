@@ -68,26 +68,21 @@ namespace WF_DiemDanh
             daShowData.Fill(dsHienThi, "THONGTIN_SINHVIEN");
             return dsHienThi;
         }
+        public int TimID()
+        {
+            DateTime da = DateTime.Now;
+            string ti = da.ToString();
+            string st = "select id from THONGTIN_SINHVIEN where id='" + txtNhap.Text + "'";
+            DataSet ds2 = new DataSet();
+            OleDbDataAdapter daShowData = new OleDbDataAdapter(st, strcon);
+            daShowData.Fill(ds2, "THONGTIN_SINHVIEN");
+            return ds2.Tables.Count;
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
+
             txtNhap.Focus();
             Open_DataAccess();
-        }
-
-        private void txtNhap_TextChanged(object sender, EventArgs e)
-        {
-            /*if (txtNhap.Text.Length == 10)
-            {
-                if (KiemTraXuatHien())
-                {
-                    DataSet ds = new DataSet();
-                    ds = Load_Data();
-                    dtgHienThi.DataSource = ds.Tables[0];
-                    GuiLenFirebase();
-                }
-                txtNhap.Clear();
-                txtNhap.Focus();
-            }*/
         }
         ////////////////////////////HÀM/////
         public bool KiemTraXuatHien() /// kiểm tra đã có trong datagirdview chưa?
@@ -140,13 +135,18 @@ namespace WF_DiemDanh
             string data = txtNhap.Text;
             if (e.KeyChar == (char)13)
             {
-                if (KiemTraXuatHien())
+                if (TimID() == 1)
                 {
-                    DataSet ds = new DataSet();
-                    ds = Load_Data();
-                    dtgHienThi.DataSource = ds.Tables[0];
-                    GuiLenFirebase();
+                    if (KiemTraXuatHien())
+                    {
+                        DataSet ds = new DataSet();
+                        ds = Load_Data();
+                        dtgHienThi.DataSource = ds.Tables[0];
+                        GuiLenFirebase();
+                    }
                 }
+                else
+                    MessageBox.Show("ID thẻ không đúng");
                 txtNhap.Clear();
                 txtNhap.Focus();
             }

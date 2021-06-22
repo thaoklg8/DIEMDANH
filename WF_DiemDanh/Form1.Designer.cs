@@ -47,11 +47,10 @@ namespace WF_DiemDanh
             // txtNhap
             // 
             this.txtNhap.Location = new System.Drawing.Point(15, 46);
-            this.txtNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNhap.Margin = new System.Windows.Forms.Padding(4);
             this.txtNhap.Name = "txtNhap";
             this.txtNhap.Size = new System.Drawing.Size(256, 30);
             this.txtNhap.TabIndex = 0;
-            this.txtNhap.TextChanged += new System.EventHandler(this.txtNhap_TextChanged);
             this.txtNhap.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNhap_KeyPress);
             // 
             // dtgHienThi
@@ -113,7 +112,7 @@ namespace WF_DiemDanh
             this.groupBox1.Location = new System.Drawing.Point(42, 22);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(286, 114);
-            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Điểm danh bằng thẻ";
             // 
@@ -156,7 +155,7 @@ namespace WF_DiemDanh
             this.Controls.Add(this.dtgHienThi);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ĐIỂM DANH";
